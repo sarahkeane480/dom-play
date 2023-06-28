@@ -1,4 +1,4 @@
-alert("Hi from DOM play")
+// alert("Hi from DOM play")
 
 /* 
 
@@ -12,4 +12,9 @@ alert("Hi from DOM play")
 
 */
 
+
+// document.querySelector(".hamlet").style.backgroundColor = 'yellow';
+
+
+// document.querySelectorAll(".hamlet").forEach(x => x.style.backgroundColor = 'yellow');
 
