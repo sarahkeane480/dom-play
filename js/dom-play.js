@@ -19,7 +19,7 @@ function highlightActor(actor) {
         if(actor == mySpan.dataset.actor){// current actor
             mySpan.style.backgroundColor='orange';
         }else{// other actor
-            mySpan.style.backgroundColor='white';
+            mySpan.style.backgroundColor='rgb(219, 226, 238)';
         }
     }
 };
