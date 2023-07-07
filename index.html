@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Title Goes Here</title>
+    <title>DOM-Play</title>
     <meta charset="utf-8" />
     <meta name="robots" content="noindex,nofollow" />
     <meta name="viewport" content="width=device-width" />
@@ -9,36 +10,205 @@
     <link rel="stylesheet" href="css/nav.css" />
     <style>
         /* p.hamlet {
-            background-color: yellow;
+            background-color: white;
         } */
-        p.skull {
-            background-color: lightblue;
-        }
+        /* #play span{
+            background-color: white;
+        } */
     </style>
 </head>
+
 <body>
     <header>
-        <h1>Title Goes Here</h1>
+        <h1>DOM-Play</h1>
         <nav class="topnav" id="myTopnav">
             <a href="index.html" class="active">Home</a>
-            <a href="#" target="_blank">Name of project goes here</a>
+            <a href="#" target="_blank">DOM-Play</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
         </nav>
     </header>
-    
+
     <main class="wrapper">
-        <p class="hamlet"><span onclick="this.style.backgroundColor='yellow'">Hamlet: To be or not to be?</span></p>
-        <p class="skull">Skull: Blah blah blah words words words</p>
-        <p class="hamlet"><span>Hamlet: HUH? Confused emoji</span></p>
+        <p>This is an example of using onclick events to change the background color of paragraphs. When you click one
+            of the lines below, it will highlight all of the lines that should be read by that actor, and remove
+            highlighting from all other lines.</p>
+
+        <p>To do this, I created a function named highlightActor(actor) that loops through each line of the play and
+            checks if they were for the actor who's name was passed into the function. If it is for them, it highlights
+            the line, but if not, it removes any highlighting.</p>
+
+        <p>Then, I created a for loop that adds an onclick event listener to each span containing a line, which then
+            calls highlightActor(actor) whenever the line is clicked. The actor argument is then replaced by the name of
+            the actor who's line was clicked. (these are identified by the "data-actor" attribute in each span</p>
+
+        <p>And after all that, the lines will highlight correctly. That's sure to help these actors focus on what they
+            do best - acting!</p>
+
+        <hr>
+
+        <div id="play">
+
+            <p><span data-actor="">
+                    Arthur and Ford are strapped against two concrete pillars
+                    with hundreds of elastic bands.</span></p>
+            <p><span data-actor="">
+                    A STRANGE AND LETHAL LOOKING DEVICE DESCENDS FROM THE
+                    CEILING. Looks like an instrument of torture. As the
+                    device descends, Jeltz fishes a JEWELED CRAB out of a
+                    gunky trough and smashes it with a hammer -- BLAM!
+                </span></p>
+
+            <p><span data-actor="">
+                    Jeltz takes the device in his hand -- then blows in it.
+                    We hear FEEDBACK. It's a microphone (like ones used to
+                    introduce boxers). He taps it.
+                </span></p>
+
+            <p><span data-actor="jeltz">JELTZ: This thing on? </span></p>
+
+            <p><span data-actor="">
+                    It is. He faces them, holds up a book entitled... " " --
+                    smirks, then begins to read Vogon poetry.
+                </span></p>
+
+            <p><span data-actor="jeltz">JELTZ: Oh freddled gruntbuggly!
+                    Thy suppurations are to me as plerdled
+                    gabbleblotchits on a lurgid bee.
+                </span></p>
+
+            <p><span data-actor="">Ford WRITHES in pain, as does Arthur but less so.</span></p>
+
+
+            <p><span data-actor="guide-voice">
+                    GUIDE VOICE:
+                    Vogon poetry is widely accepted as the
+                    third worst in the universe.
+                </span></p>
+
+            <p><span data-actor="">
+                    Ford VIBRATES like he's having an epileptic seizure.
+                    Arthur just looks like he has a migraine.
+                </span></p>
+
+            <p><span data-actor="guide-voice">
+                    GUIDE VOICE:
+                    The second worst is that of the Azgoths of
+                    Kria. During a recitation by their Poet
+                    Master Grunthos the Flatulent of his poem
+                    "Ode to a Small Lump of Green Putty I Found
+                    in My Armpit One Midsummer Morning," four
+                    of his audience died of internal
+                    hemorrhaging, and the President of the Mid-
+                    Galactic Arts Nobbling Council survived by
+                    gnawing one of his own legs off.
+                </span></p>
+
+            <p><span data-actor="">Spasms wrack Ford's body. He SCREAMS. Arthur squints.</span></p>
+
+            <p><span data-actor="jeltz">JELTZ: Or I shall rend thee In the gobberwarts
+                    with my blurglecruncheaon, see if I don't!
+                </span></p>
+
+            <p><span data-actor="">
+                    Ford's entire body tenses, arches, then goes limp.
+                    Arthur lets out an audible sigh as the poem ends.
+                </span></p>
+
+            <p><span data-actor="guide-voice">
+                    GUIDE VOICE:
+                    The absolute worst poetry was written by
+                    Paula Nancy Millstone Jennings of Sussix.
+                    It involved decaying swans. Luckily, it
+                    was destroyed when the Earth was.
+                </span></p>
+
+            <p><span data-actor="jeltz">JELTZ: So, Earthlings, I present you with a
+                    simple choice. Either die in the vacuum
+                    of space, or -- tell what you thought of
+                    my poem.
+                </span></p>
+
+            <p><span data-actor="">Ford is spent, can't say a word. Arthur looks up.</span></p>
+
+            <p><span data-actor="arthur">ARTHUR: Actually...I rather liked it.
+                </span></p>
+
+            <p><span data-actor="">Jeltz looks surprised. Ford notices, whispers to Arthur.</span></p>
+
+            <p><span data-actor="ford">FORD: Good tact. Run with it.
+                </span></p>
+
+            <p><span data-actor="arthur">ARTHUR: Um...some of the words I didn't understand,
+                    but I found the imagery quite effective.
+                </span></p>
+
+            <p><span data-actor="jeltz">JELTZ: Continue. . .
+                </span></p>
+
+
+
+            <p><span data-actor="arthur">ARTHUR: And, um, interesting rhythmic devices which
+                    seemed to counterpoint the surrealism of
+                    the underlying metaphor of the humanity...
+                </span></p>
+
+            <p><span data-actor="ford">FORD: Vogonity!
+                </span></p>
+
+            <p><span data-actor="arthur">ARTHUR: ... Vogonity, sorry. Vogonity of the poet's
+                    soul, which contrives through the medium
+                    of the verse structure to sublimate, er...
+                </span></p>
+
+            <p><span data-actor="ford">FORD: ... whatever it was ...
+                </span></p>
+
+            <p><span data-actor="arthur">ARTHUR: ... the poem was about.
+                </span></p>
+
+            <p><span data-actor="">Jeltz rubs one of his chins, then smiles and claps slowly.</span></p>
+
+            <p><span data-actor="ford">FORD: Damn.
+                </span></p>
+
+            <p><span data-actor="arthur">ARTHUR: What?
+                </span></p>
+
+            <p><span data-actor="ford">FORD: I think you just saved my life again.
+                </span></p>
+
+            <p><span data-actor="jeltz">JELTZ: An astute analysis. Very impressive.
+                    (turning to the Guard)
+                    Throw them off the ship.
+                </span></p>
+
+            <p><span data-actor="">The guard grabs them, drags them out of the bridge.</span></p>
+
+            <p><span data-actor="vogon-guard">
+                    VOGON GUARD:
+                    Resistance is useless!
+                </span></p>
+
+            <p><span data-actor="jeltz">JELTZ: Hmph. "Counterpoint the surrealism of the
+                    underlying metaphor..." Death's too good
+                    for them.
+                </span></p>
+
+            <p><span data-actor="">Jeltz picks up his fishing rod, goes for another crab.</span></p>
+
+
+
+        </div>
         <footer>
-            <p><small>&copy; 2021 by 
-                Sarah Keane, All Rights Reserved ~ 
-                <a id="html-checker" href="#">Check HTML</a> ~ 
-                <a id="css-checker" href="#">Check CSS</a></small>
+            <p><small>&copy; 2021 by
+                    Sarah Keane, All Rights Reserved ~
+                    <a id="html-checker" href="#">Check HTML</a> ~
+                    <a id="css-checker" href="#">Check CSS</a></small>
             </p>
         </footer>
     </main>
     <script src="js/main.js"></script>
     <script src="js/dom-play.js"></script>
 </body>
+
 </html>
